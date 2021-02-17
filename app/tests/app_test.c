@@ -9,7 +9,7 @@
 #define BP2 (1)
 #define FP1 (1)
 #define FP2 (2)
-#define RESULT (3)
+#define RESULT (4)
 
 #define RUN_TEST tc_1
 
