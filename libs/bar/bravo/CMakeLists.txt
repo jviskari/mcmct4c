@@ -1,8 +1,7 @@
-project(bar C)
+project(bravo C)
 
 add_library(${PROJECT_NAME}
-    src/bar_interface.c
-    src/bar_internal.c
+    src/bravo.c
 )
 
 add_library(libs::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
@@ -20,11 +19,6 @@ target_compile_features(${PROJECT_NAME}
     c_std_99
 )
 
-if (DEFINED bravo)
-    add_subdirectory(bravo)
-    target_link_libraries(${PROJECT_NAME} bravo)
-endif()
-
-if(BUILD_TESTING)
-    add_subdirectory(tests)
-endif()
+target_compile_definitions(${PROJECT_NAME} INTERFACE
+    -DBRAVO=bravo
+)
