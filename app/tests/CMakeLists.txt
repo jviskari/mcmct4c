@@ -7,8 +7,7 @@ add_executable(${PROJECT_NAME}_1
 
 target_link_libraries(${PROJECT_NAME}_1
     PRIVATE
-        libs::bar
-        libs::foo
+        myinterface::meta
 )
 
 #define test case TC_1...TC_n
