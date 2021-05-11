@@ -8,12 +8,13 @@ the library.
 
 Components:
 
-- `app`.
-- `app\tests`.
-- `libs/foo`.
-- `libs/foo/tests`.
-- `libs/bar`.
-- `libs/bar/tests`.
+- app
+- app\tests
+- libs/foo
+- libs/foo/tests
+- libs/bar`
+- libs/bar/tests
+
 
 ## Usage
 
