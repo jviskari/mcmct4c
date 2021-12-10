@@ -9,10 +9,10 @@ test: compile
 	cd build && ctest .
 
 compile: gen
-	cd build && cmake --build . --target all
+	cd build && cmake --build . --target all && dot -Tpng -o foo.png graph/foo.dot
 
 gen: mkbuild
-	cd build && cmake ..
+	cd build && cmake .. --graphviz=graph/foo.dot
 
 mkbuild:
 	mkdir -p build
